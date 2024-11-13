@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLN Brief - Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #3498db;
+            margin-bottom: 1em;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            color: #555;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the contact section */
+        .contact-details {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .contact-details p {
+            margin: 0.5em 0;
+        }
+
+        /* Section spacing */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .profile-image {
+                float: none;
+                display: block;
+                margin: 0 auto 20px auto;
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.7em;
+            }
+
+            p, li {
+                font-size: 1em;
+            }
+        }
+
+        /* Back Button Style */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 1.1em;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Back to Home Button -->
+        <a href="../index.html" class="back-btn">Back to Home</a>
+
+        <div class="profile-section clearfix">
+            <!-- Add image source here, replace 'profile-image.jpg' with the actual image -->
+            <img src="profile-image.jpg" alt="Profile Photo" class="profile-image">
+            <h1>Dr. Latesh Nikam</h1>
+        </div>
+
+        <div class="section">
+            <h2>Bio-Data</h2>
+            <ul>
+                <li><strong>Name:</strong> Dr. Latesh Khanderao Nikam</li>
+                <li><strong>Address:</strong> Datta Sadan, Indrayani Teer (South), Alandi (Deo), Pune 412105</li>
+                <li><strong>Phone:</strong> 9822840971</li>
+                <li><strong>College:</strong> PDEA’s Annasaheb Magar Mahavidyalaya, Hadapsar, Pune-28</li>
+                <li><strong>College Phone:</strong> 7282618, 7280204</li>
+                <li><strong>Present Position:</strong> Head and Associate Professor</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Academic Achievements</h2>
+            <ul>
+                <li>Member of Board of Studies, Chemistry, Savitribai Phule Pune University (2017-2022)</li>
+                <li>Member of Syllabus Restructuring Committee for B.Sc. Chemistry (2013-2015), SPPU</li>
+                <li>Member of Syllabus Restructuring Committee for M.Sc. Chemistry (2016-2017), Mumbai University</li>
+                <li>Resource Person for Microscale Techniques in Physical Chemistry, Nanomaterials Research</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Research & Field of Study</h2>
+            <ul>
+                <li><strong>Field of Ph.D.:</strong> Nanoscience and Nanotechnology</li>
+                <li><strong>Research Centre for Ph.D.:</strong> C-MET, Pune</li>
+                <li><strong>Papers Published in International Journals:</strong> 31</li>
+                <li><strong>Research Guide:</strong> Ph.D. and M.Phil. under SPPU</li>
+                <li><strong>Memberships:</strong> Life Member of Material Research Society of India (MRSI), Indian Meteorological Society, Pune Chapter (IMSP)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Educational Qualification</h2>
+            <ul>
+                <li><strong>M.Sc. (Physical Chemistry)</strong></li>
+                <li><strong>Ph.D. (Chemistry)</strong></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Undergraduate Teaching:</strong> 33 years</li>
+                <li><strong>Postgraduate Teaching:</strong> 12 years</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Consultancy</h2>
+            <p>Provides consultancy to industries regarding analysis based on UV, FTIR, XRD, TG, and problem-solving.</p>
+        </div>
+    </div>
+</body>
+</html>

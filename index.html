@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moraya Scitech Lab and Publications</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f2f8; /* Light blue background */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.photo-gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center 10%; 
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .photo-gallery img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .header-content p {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+
+        section h2 {
+            font-size: 28px;
+            color: #004080;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .intro p {
+            width: 55%;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-right: 20px;
+        }
+
+        .intro img {
+            width: 40%;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .team-list, .contact-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .team-list li, .contact-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .team-list li a {
+            color: #004080;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .team-list li a:hover {
+            color: #ffd700;
+        }
+
+        .contact-list li {
+            color: #004080;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-list li:hover {
+            background-color: #e6f7ff;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Service item styling */
+        .services-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .service-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            background-color: #e6f0f7;
+        }
+
+        .service-item .service-description {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .service-item.active .service-description {
+            display: block;
+        }
+
+        footer {
+            background-color: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            bottom: 0;
+            font-size: 16px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+            }
+
+            .intro p, .intro img {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .service-item {
+                padding: 15px;
+            }
+        }
+  .title-container {
+            text-align: center;
+            animation: glow 3s ease-out forwards; /* Apply the glow effect */
+        }
+
+        .title-container h1 {
+            font-size: 48px;  /* Increased font size */
+            font-weight: bold;
+            color: white; /* White text color */
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        @keyframes glow  {
+            0% {
+                text-shadow: 0 0 3px black, 0 0 5px black, 0 0 8px black; /* Black glow */
+            }
+            50% {
+                text-shadow: 0 0 8px black, 0 0 12px black, 0 0 18px black;
+            }
+            100% {
+                text-shadow: 0 0 3px black, 0 0 5px black, 0 0 8px black;
+            }
+	}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <h1>Moraya Scitech Lab and Publications</h1>
+            <p>Advancing Scientific Research and Innovation</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Moraya Scitech Lab</h2>
+        <div class="intro">
+            <p>Moraya Scitech Lab is committed to pioneering advancements in scientific research, technology, and knowledge dissemination. With a robust team of experts across various scientific disciplines, we aim to bridge the gap between academia, industry, and the public by offering innovative, research-driven solutions tailored to address real-world challenges. Our services span from sophisticated material analysis and laboratory setup to environmental consulting, scientific publications, and specialized consultancy.
+We understand the unique needs of industries, research institutions, and academic bodies, providing comprehensive support in product development, quality testing, regulatory compliance, and sustainable practices. By equipping clients with the latest scientific insights and technological expertise, Moraya Scitech Lab empowers organizations to achieve their goals efficiently and effectively, contributing to a more knowledgeable and scientifically grounded society.
+Whether it's enhancing research capabilities, training future professionals, or helping researchers publish in high-impact journals, our lab stands as a trusted partner dedicated to elevating standards and fostering innovation. Through our commitment to excellence, we aim to be a leader in the global scientific community, making meaningful contributions to the advancement of science and technology.</p>
+            <img src="images/lab-research.jpg" alt="Laboratory Research">
+        </div>
+    </section>
+	
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our team is composed of experienced scientists and professionals:</p>
+        <ul class="team-list">
+            <li><a href="images/Bharat_Kale.html" target="_blank">Dr. Bharat Kale M.Sc Ph.D - Scientist –G FRSC London UK, Former Director General C.MET Govt. of India.</a></li>
+           <li><a href="images/KG_kanade.html" target="_blank">Prof. Dr. K. G. Kanade M.Sc Ph.D - Principal Rajmata College Bhosari.</a></li>
+            <li><a href="images/Latesh_Nikam.html" target="_blank">Dr. Latesh Nikam M.Sc Ph.D (Chemistry)</a></li>
+            <li>Dr. D. D. Patil M.Sc Ph.D (Chemistry)</li>
+            <li><a href="images/Dr.pathare.html" target="_blank">Dr. Ram Pathare BA LLB DLL&LW DBM MBA Ph.D - Dy. Supdt. of Police (Rtd.)</li>
+            <li><a href="images/Sayali_Kale.html" target="_blank">Dr. Sayali Kale M.Tech Ph.D (Mech)</a></li>
+            <li><a href="images/Chaitanya_Kanade.html" target="_blank">Dr. Chaitanya Kanade M.Sc Ph.D (Chemistry) from IISER</a></li>
+            <li><a href="images/Dnyanesh_Nikam.html" target="_blank">Mr. Dnyanesh Nikam BE Civil ME Structural Engineering</a></li>
+            <li>Mr. Akshaykumar Pathare B.Tech (Mech) MBA</li>
+        </ul>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul class="services-list">
+            <li class="service-item" tabindex="0">
+                Material Testing and Analysis
+                <p class="service-description">We offer comprehensive and reliable quantitative and qualitative analysis of materials, including chemical composition, physical properties, and more, for research and industrial purposes.</p>
+            </li>
+            <li class="service-item" tabindex="0">
+                Consultancy Services
+                <p class="service-description">Our consultants offer tailored expertise for industries and R&D labs, including regulatory compliance, process optimization, product development, and market research.</p>
+            </li>
+            <li class="service-item" tabindex="0">
+                Manpower Training and Placement
+                <p class="service-description">We offer specialized training programs and placement assistance for individuals in scientific and technical fields, enhancing career readiness and industry-specific skills.</p>
+            </li>
+            <li class="service-item" tabindex="0">
+                Research and Development
+                <p class="service-description">We provide R&D services to industries and academic institutions, including product development, process optimization, and new material synthesis.</p>
+            </li>
+            <li class="service-item" tabindex="0">
+                Laboratory Setup and Management
+                <p class="service-description">Our team provides end-to-end laboratory setup services, from designing the layout to procuring equipment and managing operations efficiently.</p>
+            </li>
+            <li class="service-item" tabindex="0">
+                Scientific Publications and Journals
+                <p class="service-description">We assist researchers with publishing scientific papers, including editing, formatting, and submission to reputed journals in various domains.</p>
+            </li>
+            <li class="service-item" tabindex="0">
+                Environmental Consulting
+                <p class="service-description">Our services extend to environmental consulting, including water, air, and soil testing, along with regulatory compliance and sustainability assessments.</p>
+            </li>
+        </ul>
+        <div class="service-image">
+            <img src="images/services-research.jpg" alt="Services">
+        </div>
+    </section>
+	<section id="photographs">
+    <h2>Our Team</h2>
+    <div class="photo-gallery">
+        <img src="images/1.JPEG" alt="Team Member 1">
+        <img src="images/2.JPEG" alt="Team Member 2">
+        <img src="images/3.JPEG" alt="Team Member 3">
+        <img src="images/4.JPEG" alt="Team Member 4">
+        <img src="images/5.JPEG" alt="Team Member 5">
+        <img src="images/6.JPEG" alt="Team Member 6">
+	<img src="images/7.JPEG" alt="Team Member 7">
+	
+    </div>
+</section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please reach out to any of the following key personnel:</p>
+        <ul class="contact-list">
+            <li>Dr. Bharat Kale - Contact No: 9423014560</li>
+            <li>Dr. Sayali Kale - Contact No: 9420482529</li>
+            <li>Prof. Dr. K. G. Kanade - Contact No: 9881711038</li>
+            <li>Dr. Chaitanya Kanade - Contact No: 9420863244</li>
+            <li>Dr. Latesh Nikam - Contact No: 9822840971</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Moraya Scitech Lab and Publications. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const serviceItems = document.querySelectorAll('.service-item');
+        
+        serviceItems.forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
